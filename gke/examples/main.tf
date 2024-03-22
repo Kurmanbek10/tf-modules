@@ -1,5 +1,11 @@
+provider "google" {
+  project = var.project_id
+  region  = var.location_tf
+  zone    = "us-central1-a"
+}
+
 module name {
-    source = "/Users/kurmanbekdzenaliev/git-repositories/evening_classes/tf-modules/gke/"
+    source = "git@github.com:Kurmanbek10/tf-modules.git/gke"
     project_id           = "graphic-cosmos-417822"
     cluster_name         = "my-gke-cluster-first"
     display_name         = "Service Account"
